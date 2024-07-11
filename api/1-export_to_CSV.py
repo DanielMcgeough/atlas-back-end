@@ -25,8 +25,8 @@ if __name__ == "__main__":
     # Fetch the to-do list items associated with the
     #   given user ID and convert the response to a JSON object
     todos = requests.get(
-    url + "todos",
-    params={"userId": user_id}
+        url + "todos",
+        params={"userId": user_id}
     ).json()
 
     # Use list comprehension to iterate over the to-do list items
