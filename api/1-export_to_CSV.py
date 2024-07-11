@@ -25,7 +25,7 @@ if __name__ == "__main__":
     EmployeeName = employee.get("EmployeeName")
 
     todos = requests.get(
-        url="todos",
+        url + "todos",
         params={"employeeid": employee_id}
     ).json()
 
