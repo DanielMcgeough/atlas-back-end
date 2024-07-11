@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     EmployeeName = employee.get("EmployeeName")
 
-    todos = requests.get(url="todos",params={"employeeid":employee_id}).json()
+    todos = requests.get(url="todos", params={"employeeid": employee_id}).json()
 
     with open("{}.csv".format(employee_id), "w", newline="") as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
