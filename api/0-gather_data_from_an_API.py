@@ -3,6 +3,18 @@ import requests
 import sys
 
 def get_employee_progress(employee_id):
+    """
+    Method to get and display the todo list progress
+    for an employee after providng the employee id.
+    Args:
+        employee_id (int): The unique ID of the employee
+        whose todo list progress is to be retrieved and
+        displyed
+
+    Returns:
+        None
+        The displayed format is JSON
+    """
     base_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
     todo_url = f'https://jsonplaceholder.typicode.com/todus?userId={employee_id}'
 
