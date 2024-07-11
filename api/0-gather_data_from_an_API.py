@@ -45,6 +45,11 @@ def get_employee_progress(employee_id):
             print(f"\t- {todo.get("title")}")
 
 if __name__ == "__main__":
+    """
+    This function exists because without it the function
+    would immediately run on import and that is not
+    and ideal SOC for such a function.
+    """
     if len(sys.argv) != 2:
         print("Usage: pythong script.py <employee_id>")
         sys.exit(1)
