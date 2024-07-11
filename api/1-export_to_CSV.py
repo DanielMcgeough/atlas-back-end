@@ -29,7 +29,7 @@ if __name__=="__main__":
     todos = requests.get(url = "todos", params={"employeeid":employee_id}).json()
 
     with open("{}.csv".format(employee_id), "w", newline="") as csvfile:
-        writer = csv.writer(cvsfile, quoting=csv.QUOTE_ALL)
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         [writer.writerow(
             [employee_id, EmployeeName, t.get("completed"), t.get("title")]
         ) for t in todos]
