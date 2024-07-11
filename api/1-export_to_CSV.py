@@ -6,7 +6,7 @@ This script takes an employee ID as a command-line argument and fetches
 the corresponding user information and to-do list from the JSONPlaceholder API.
 It then prints the tasks completed by the employee in CSV form.
 """
-
+import csv
 import requests
 import sys
 
